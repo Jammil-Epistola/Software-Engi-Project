@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=4 uid="uid://cjsqapyg672ml"]
+[gd_scene load_steps=8 format=4 uid="uid://cjsqapyg672ml"]
 
 [ext_resource type="Texture2D" uid="uid://ba5bpl21n7ttl" path="res://Assets/Sprites/world_tileset.png" id="1_5f7qw"]
 [ext_resource type="PackedScene" uid="uid://dtpeo4bjalcqq" path="res://Assets/Player.tscn" id="1_sm0u3"]
 [ext_resource type="PackedScene" uid="uid://cqe7ushx0kt26" path="res://Assets/platform.tscn" id="3_4504r"]
 [ext_resource type="PackedScene" uid="uid://ciaxbohfhha4q" path="res://Assets/coin.tscn" id="4_qyuya"]
+[ext_resource type="PackedScene" uid="uid://dforcyy8w40mh" path="res://Scenes/pause_menu.tscn" id="5_57s4o"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kma4c"]
 texture = ExtResource("1_5f7qw")
@@ -207,3 +208,7 @@ position = Vector2(125, -12)
 
 [node name="Coin4" parent="." instance=ExtResource("4_qyuya")]
 position = Vector2(-54, -47)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("5_57s4o")]

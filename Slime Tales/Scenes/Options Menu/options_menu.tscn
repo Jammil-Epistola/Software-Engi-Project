@@ -1,12 +1,12 @@
 [gd_scene load_steps=10 format=3 uid="uid://qthkgvk1iy2d"]
 
 [ext_resource type="Script" path="res://Scripts/options_menu.gd" id="1_dt3ws"]
-[ext_resource type="Texture2D" uid="uid://b56sscd5dggbp" path="res://Assets/SettingsBG.png" id="2_wsrap"]
-[ext_resource type="FontFile" uid="uid://dyd80n3v81nhl" path="res://Assets/AldotheApache.ttf" id="3_qmoun"]
+[ext_resource type="Texture2D" uid="uid://crrlrsdp2cbu5" path="res://Assets/Images/SE-MenuBg.png" id="2_62l34"]
+[ext_resource type="FontFile" uid="uid://dyd80n3v81nhl" path="res://Assets/Text Fonts/AldotheApache.ttf" id="3_qmoun"]
 [ext_resource type="PackedScene" uid="uid://cd2kmfycbf3i8" path="res://Scenes/Options Menu/options_tab_menu.tscn" id="4_tivei"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mc5n3"]
-texture = ExtResource("2_wsrap")
+texture = ExtResource("2_62l34")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_20hwx"]
 
@@ -50,12 +50,28 @@ grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_mc5n3")
 metadata/_edit_use_anchors_ = true
 
+[node name="Settings Text" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -126.0
+offset_top = 21.0
+offset_right = 127.0
+offset_bottom = 97.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_qmoun")
+theme_override_font_sizes/font_size = 55
+text = "SETTINGS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="Back Button" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.0850694
+anchor_left = 0.126736
 anchor_top = 0.0540123
-anchor_right = 0.0850694
+anchor_right = 0.126736
 anchor_bottom = 0.0540123
 offset_right = 182.0
 offset_bottom = 61.0

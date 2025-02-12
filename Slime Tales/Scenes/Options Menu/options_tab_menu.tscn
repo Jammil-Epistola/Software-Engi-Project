@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://cd2kmfycbf3i8"]
 
-[ext_resource type="FontFile" uid="uid://dyd80n3v81nhl" path="res://Assets/AldotheApache.ttf" id="1_fgl76"]
+[ext_resource type="FontFile" uid="uid://dyd80n3v81nhl" path="res://Assets/Text Fonts/AldotheApache.ttf" id="1_fgl76"]
 [ext_resource type="Script" path="res://Scripts/options_tab_menu.gd" id="1_kh1tt"]
 [ext_resource type="PackedScene" uid="uid://bkjv0otjt3n6" path="res://Scenes/Options Menu/hotkey_rebind_button.tscn" id="3_nmxyh"]
 [ext_resource type="PackedScene" uid="uid://0f7okaw2w8ju" path="res://Scenes/Options Menu/audio_slider_settings.tscn" id="4_stm60"]
@@ -98,15 +98,14 @@ offset_top = 118.0
 offset_right = 1108.0
 offset_bottom = 540.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_oajju")
-current_tab = 1
+current_tab = 0
 tabs_visible = false
 
-[node name="SoundTab" type="TabBar" parent="TabContainer"]
-visible = false
+[node name="ControlsTab" type="TabBar" parent="TabContainer"]
 layout_mode = 2
 metadata/_tab_index = 0
 
-[node name="Panel" type="Panel" parent="TabContainer/SoundTab"]
+[node name="Panel" type="Panel" parent="TabContainer/ControlsTab"]
 layout_mode = 2
 offset_left = 20.0
 offset_top = 84.0
@@ -114,7 +113,7 @@ offset_right = 627.0
 offset_bottom = 92.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ktwa8")
 
-[node name="MarginContainer" type="MarginContainer" parent="TabContainer/SoundTab"]
+[node name="MarginContainer" type="MarginContainer" parent="TabContainer/ControlsTab"]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.182464
@@ -128,53 +127,54 @@ theme_override_constants/margin_right = 24
 theme_override_constants/margin_bottom = 24
 metadata/_edit_use_anchors_ = true
 
-[node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/SoundTab/MarginContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/ControlsTab/MarginContainer"]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/SoundTab/MarginContainer/ScrollContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/ControlsTab/MarginContainer/ScrollContainer"]
 layout_mode = 2
 theme_override_constants/separation = 69
 alignment = 1
 
-[node name="HSeparator" type="HSeparator" parent="TabContainer/SoundTab/MarginContainer/ScrollContainer/VBoxContainer"]
+[node name="HSeparator" type="HSeparator" parent="TabContainer/ControlsTab/MarginContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/separation = 5
 theme_override_styles/separator = SubResource("StyleBoxEmpty_knbm8")
 
-[node name="Hotkey_Rebind_Button" parent="TabContainer/SoundTab/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("3_nmxyh")]
+[node name="Hotkey_Rebind_Button" parent="TabContainer/ControlsTab/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("3_nmxyh")]
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 
-[node name="Hotkey_Rebind_Button2" parent="TabContainer/SoundTab/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("3_nmxyh")]
+[node name="Hotkey_Rebind_Button2" parent="TabContainer/ControlsTab/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("3_nmxyh")]
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 action_name = "move_right"
 
-[node name="Hotkey_Rebind_Button3" parent="TabContainer/SoundTab/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("3_nmxyh")]
+[node name="Hotkey_Rebind_Button3" parent="TabContainer/ControlsTab/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("3_nmxyh")]
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 action_name = "move_down"
 
-[node name="Hotkey_Rebind_Button4" parent="TabContainer/SoundTab/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("3_nmxyh")]
+[node name="Hotkey_Rebind_Button4" parent="TabContainer/ControlsTab/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("3_nmxyh")]
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 action_name = "jump"
 
-[node name="Hotkey_Rebind_Button5" parent="TabContainer/SoundTab/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("3_nmxyh")]
+[node name="Hotkey_Rebind_Button5" parent="TabContainer/ControlsTab/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("3_nmxyh")]
 layout_mode = 2
 size_flags_horizontal = 0
 action_name = "interact"
 
-[node name="HSeparator2" type="HSeparator" parent="TabContainer/SoundTab/MarginContainer/ScrollContainer/VBoxContainer"]
+[node name="HSeparator2" type="HSeparator" parent="TabContainer/ControlsTab/MarginContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/separation = 5
 theme_override_styles/separator = SubResource("StyleBoxEmpty_knbm8")
 
 [node name="AudioTab" type="TabBar" parent="TabContainer"]
+visible = false
 layout_mode = 2
 metadata/_tab_index = 1
 
@@ -191,21 +191,18 @@ theme_override_constants/margin_right = 24
 theme_override_constants/margin_bottom = 24
 metadata/_edit_use_anchors_ = true
 
-[node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/AudioTab/MarginContainer"]
-layout_mode = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/AudioTab/MarginContainer/ScrollContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/AudioTab/MarginContainer"]
 layout_mode = 2
 theme_override_constants/separation = 64
 
-[node name="Audio_Slider_Settings" parent="TabContainer/AudioTab/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("4_stm60")]
+[node name="Audio_Slider_Settings" parent="TabContainer/AudioTab/MarginContainer/VBoxContainer" instance=ExtResource("4_stm60")]
 layout_mode = 2
 
-[node name="Audio_Slider_Settings2" parent="TabContainer/AudioTab/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("4_stm60")]
+[node name="Audio_Slider_Settings2" parent="TabContainer/AudioTab/MarginContainer/VBoxContainer" instance=ExtResource("4_stm60")]
 layout_mode = 2
 bus_name = "Music"
 
-[node name="Audio_Slider_Settings3" parent="TabContainer/AudioTab/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("4_stm60")]
+[node name="Audio_Slider_Settings3" parent="TabContainer/AudioTab/MarginContainer/VBoxContainer" instance=ExtResource("4_stm60")]
 layout_mode = 2
 bus_name = "Sfx"
 

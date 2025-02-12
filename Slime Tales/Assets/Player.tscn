@@ -1,8 +1,10 @@
-[gd_scene load_steps=24 format=3 uid="uid://dtpeo4bjalcqq"]
+[gd_scene load_steps=25 format=3 uid="uid://dtpeo4bjalcqq"]
 
 [ext_resource type="Texture2D" uid="uid://bgf1644gayqcb" path="res://Assets/Sprites/slime_idle.png" id="1_dnngw"]
 [ext_resource type="Script" path="res://Scripts/player_controller.gd" id="1_j5f6u"]
 [ext_resource type="AudioStream" uid="uid://kgkbjgo7ml71" path="res://Assets/SFX/353250__zuzek06__slimejump.wav" id="3_ab05r"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_o7j4s"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_30xcy"]
 atlas = ExtResource("1_dnngw")
@@ -147,6 +149,7 @@ collision_layer = 2
 script = ExtResource("1_j5f6u")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_o7j4s")
 position = Vector2(0, -6)
 sprite_frames = SubResource("SpriteFrames_876lc")
 animation = &"idle"

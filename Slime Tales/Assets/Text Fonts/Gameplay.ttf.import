@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://dyd80n3v81nhl"
-path="res://.godot/imported/AldotheApache.ttf-1b5f6348ed4d48fa6895d91ef4563fe1.fontdata"
+uid="uid://dh1or6jgu5dia"
+path="res://.godot/imported/Gameplay.ttf-3ef2df661574cc2ae632bb9275e90e8b.fontdata"
 
 [deps]
 
-source_file="res://Assets/AldotheApache.ttf"
-dest_files=["res://.godot/imported/AldotheApache.ttf-1b5f6348ed4d48fa6895d91ef4563fe1.fontdata"]
+source_file="res://Assets/Text Fonts/Gameplay.ttf"
+dest_files=["res://.godot/imported/Gameplay.ttf-3ef2df661574cc2ae632bb9275e90e8b.fontdata"]
 
 [params]
 

@@ -1,0 +1,222 @@
+[gd_scene load_steps=15 format=3 uid="uid://dagirmjrkj6w4"]
+
+[ext_resource type="Script" path="res://Scenes/about_menu.gd" id="1_bidvn"]
+[ext_resource type="Texture2D" uid="uid://crrlrsdp2cbu5" path="res://Assets/Images/SE-MenuBg.png" id="1_hs1ku"]
+[ext_resource type="FontFile" uid="uid://dyd80n3v81nhl" path="res://Assets/Text Fonts/AldotheApache.ttf" id="2_nc48i"]
+[ext_resource type="FontFile" uid="uid://vvsrycc23x0w" path="res://Assets/Text Fonts/CenturyGothic.ttf" id="3_ekpfo"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dkixu"]
+texture = ExtResource("1_hs1ku")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ou16o"]
+bg_color = Color(0, 0, 0, 0.788235)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1s2bq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gb80l"]
+bg_color = Color(0.227414, 0.449119, 0.230519, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0s1ch"]
+bg_color = Color(0.116953, 0.252441, 0.118877, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x2xih"]
+bg_color = Color(0.149173, 0.309937, 0.151451, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ac7xc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tof5v"]
+bg_color = Color(0.0980392, 0.0980392, 0.0980392, 0.701961)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hnsr3"]
+bg_color = Color(0, 0, 0, 0.819608)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v1qch"]
+bg_color = Color(0, 0, 0, 0.568627)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="AboutMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bidvn")
+
+[node name="AboutBg" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_dkixu")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.079
+anchor_top = 0.142
+anchor_right = 0.079
+anchor_bottom = 0.142
+offset_left = 5.992
+offset_top = -43.016
+offset_right = 963.992
+offset_bottom = 467.984
+theme_override_styles/panel = SubResource("StyleBoxFlat_ou16o")
+
+[node name="About Text" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -125.0
+offset_top = -1.0
+offset_right = 128.0
+offset_bottom = 75.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_nc48i")
+theme_override_font_sizes/font_size = 55
+text = "- About -"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Credits Text" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -127.0
+offset_top = -221.0
+offset_right = 126.0
+offset_bottom = -145.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_nc48i")
+theme_override_font_sizes/font_size = 55
+text = "- Credits -"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="About Desc" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.492
+anchor_top = 0.223
+anchor_right = 0.492
+anchor_bottom = 0.223
+offset_left = -449.336
+offset_top = -32.026
+offset_right = 479.664
+offset_bottom = 195.974
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_ekpfo")
+theme_override_font_sizes/font_size = 23
+text = "Our game is an accessible platformer created specifically for disabled players, offering an inclusive and immersive gaming experience. Designed with accessibility-first principles, it eliminates traditional barriers by integrating adaptive controls, customizable inputs, and a variety of assistive features tailored to different disabilities. By prioritizing disabled gamers, we strive to create a platforming experience where everyone can play and enjoy without limitations."
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Credits Desc" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.492
+anchor_top = 0.223
+anchor_right = 0.492
+anchor_bottom = 0.223
+offset_left = -346.336
+offset_top = 243.047
+offset_right = -60.336
+offset_bottom = 380.047
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_ekpfo")
+theme_override_font_sizes/font_size = 23
+text = "Epistola, Jammil
+Javier, Raquel
+Ojoy, Angel"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Credits Desc2" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.492
+anchor_top = 0.223
+anchor_right = 0.492
+anchor_bottom = 0.223
+offset_left = 77.664
+offset_top = 243.047
+offset_right = 467.664
+offset_bottom = 380.047
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_ekpfo")
+theme_override_font_sizes/font_size = 23
+text = "Music By HeatlyBros
+"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="YT Link" type="Button" parent="Panel/Credits Desc2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.599
+anchor_right = 0.5
+anchor_bottom = 0.599
+offset_left = -157.0
+offset_top = -28.063
+offset_right = 154.0
+offset_bottom = 27.937
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_1s2bq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gb80l")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_0s1ch")
+theme_override_styles/normal = SubResource("StyleBoxFlat_x2xih")
+text = "https://www.youtube.com/user/HeatleyBros"
+autowrap_mode = 2
+
+[node name="Back Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0859375
+anchor_top = 0.887346
+anchor_right = 0.0859375
+anchor_bottom = 0.887346
+offset_right = 182.0
+offset_bottom = 61.0
+theme_override_fonts/font = ExtResource("2_nc48i")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ac7xc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_tof5v")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hnsr3")
+theme_override_styles/normal = SubResource("StyleBoxFlat_v1qch")
+text = "BACK"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Panel/Credits Desc2/YT Link" to="." method="_on_yt_link_pressed"]
+[connection signal="pressed" from="Back Button" to="." method="_on_back_button_pressed"]
