@@ -1,11 +1,8 @@
-[gd_scene load_steps=23 format=3 uid="uid://dtpeo4bjalcqq"]
+[gd_scene load_steps=24 format=3 uid="uid://dtpeo4bjalcqq"]
 
 [ext_resource type="Texture2D" uid="uid://bgf1644gayqcb" path="res://Assets/Sprites/slime_idle.png" id="1_dnngw"]
 [ext_resource type="Script" path="res://Scripts/player_controller.gd" id="1_j5f6u"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_nf3hr"]
-atlas = ExtResource("1_dnngw")
-region = Rect2(0, 0, 24, 24)
+[ext_resource type="AudioStream" uid="uid://kgkbjgo7ml71" path="res://Assets/SFX/353250__zuzek06__slimejump.wav" id="3_ab05r"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_30xcy"]
 atlas = ExtResource("1_dnngw")
@@ -14,6 +11,10 @@ region = Rect2(24, 0, 24, 24)
 [sub_resource type="AtlasTexture" id="AtlasTexture_1web2"]
 atlas = ExtResource("1_dnngw")
 region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nf3hr"]
+atlas = ExtResource("1_dnngw")
+region = Rect2(0, 0, 24, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rihjc"]
 atlas = ExtResource("1_dnngw")
@@ -79,13 +80,13 @@ region = Rect2(48, 72, 24, 24)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_nf3hr")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_30xcy")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_1web2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nf3hr")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_rihjc")
@@ -142,16 +143,22 @@ radius = 6.08276
 
 [node name="Player" type="CharacterBody2D"]
 z_index = 5
+collision_layer = 2
 script = ExtResource("1_j5f6u")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -6)
 sprite_frames = SubResource("SpriteFrames_876lc")
 animation = &"idle"
-frame = 4
-frame_progress = 0.41861
+autoplay = "idle"
+frame = 15
+frame_progress = 0.171199
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -6)
 scale = Vector2(1.745, 0.975)
 shape = SubResource("CircleShape2D_aeb4t")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_ab05r")
+bus = &"Sfx"

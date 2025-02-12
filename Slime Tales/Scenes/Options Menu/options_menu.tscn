@@ -1,0 +1,73 @@
+[gd_scene load_steps=10 format=3 uid="uid://qthkgvk1iy2d"]
+
+[ext_resource type="Script" path="res://Scripts/options_menu.gd" id="1_dt3ws"]
+[ext_resource type="Texture2D" uid="uid://b56sscd5dggbp" path="res://Assets/SettingsBG.png" id="2_wsrap"]
+[ext_resource type="FontFile" uid="uid://dyd80n3v81nhl" path="res://Assets/AldotheApache.ttf" id="3_qmoun"]
+[ext_resource type="PackedScene" uid="uid://cd2kmfycbf3i8" path="res://Scenes/Options Menu/options_tab_menu.tscn" id="4_tivei"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mc5n3"]
+texture = ExtResource("2_wsrap")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_20hwx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yre63"]
+bg_color = Color(0.0980392, 0.0980392, 0.0980392, 0.701961)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ebgah"]
+bg_color = Color(0, 0, 0, 0.819608)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m16vp"]
+bg_color = Color(0, 0, 0, 0.568627)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="Options" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dt3ws")
+
+[node name="Background" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_mc5n3")
+metadata/_edit_use_anchors_ = true
+
+[node name="Back Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0850694
+anchor_top = 0.0540123
+anchor_right = 0.0850694
+anchor_bottom = 0.0540123
+offset_right = 182.0
+offset_bottom = 61.0
+theme_override_fonts/font = ExtResource("3_qmoun")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/focus = SubResource("StyleBoxEmpty_20hwx")
+theme_override_styles/hover = SubResource("StyleBoxFlat_yre63")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ebgah")
+theme_override_styles/normal = SubResource("StyleBoxFlat_m16vp")
+text = "BACK"
+metadata/_edit_use_anchors_ = true
+
+[node name="options_tab" parent="." instance=ExtResource("4_tivei")]
+
+[connection signal="pressed" from="Back Button" to="." method="_on_back_button_pressed"]

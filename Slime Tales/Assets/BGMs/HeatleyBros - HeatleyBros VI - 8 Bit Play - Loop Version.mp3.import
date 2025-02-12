@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bgqt7iwuy46gp"
+path="res://.godot/imported/HeatleyBros - HeatleyBros VI - 8 Bit Play - Loop Version.mp3-a44bca203b2ce05b8aea2aa572bcbc5b.mp3str"
+
+[deps]
+
+source_file="res://Assets/BGMs/HeatleyBros - HeatleyBros VI - 8 Bit Play - Loop Version.mp3"
+dest_files=["res://.godot/imported/HeatleyBros - HeatleyBros VI - 8 Bit Play - Loop Version.mp3-a44bca203b2ce05b8aea2aa572bcbc5b.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4
