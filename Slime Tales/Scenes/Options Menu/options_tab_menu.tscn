@@ -31,7 +31,9 @@ corner_detail = 10
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_knbm8"]
 
-[node name="options_tab" type="Node"]
+[node name="options_tab" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_kh1tt")
 
 [node name="Settings Selection" type="Panel" parent="."]
@@ -172,6 +174,16 @@ action_name = "interact"
 layout_mode = 2
 theme_override_constants/separation = 5
 theme_override_styles/separator = SubResource("StyleBoxEmpty_knbm8")
+
+[node name="Label" type="Label" parent="TabContainer/ControlsTab"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 37.0
+offset_top = 21.0
+offset_right = 231.0
+offset_bottom = 63.0
+theme_override_font_sizes/font_size = 30
+text = "CONTROLLER :              <   KEYBOARD   >"
 
 [node name="AudioTab" type="TabBar" parent="TabContainer"]
 visible = false

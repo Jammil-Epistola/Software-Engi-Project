@@ -1,15 +1,21 @@
 extends Control
 
+@onready var options_tab_menu = $options_tab
+
 func _ready():
 	self.visible = false
+	options_tab_menu.visible = false
 
 func resume():
 	get_tree().paused = false
 	self.visible = false
+	options_tab_menu.visible = false
 
 func pause():
 	get_tree().paused = true
 	self.visible = true
+	options_tab_menu.visible = false
+	
 
 func testEsc():
 	if Input.is_action_just_pressed("pause"):
@@ -22,12 +28,14 @@ func _on_continue_button_pressed() -> void:
 	resume()
 
 func _on_options_button_pressed() -> void:
-	pass # Replace with function body.
-
-
+	options_tab_menu.visible = true
+	
+func _on_back_pressed() -> void:
+	options_tab_menu.visible = false
+	
 func _on_return_button_pressed() -> void:
 	resume()
 	get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")
 
-func _process(delta):
+func _process(_delta):
 	testEsc()
