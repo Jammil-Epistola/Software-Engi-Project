@@ -44,5 +44,4 @@ func enable_one_way_collision():
 	for platform in get_tree().get_nodes_in_group("one_way"):
 		var collision = platform.get_node_or_null("CollisionShape2D")
 		if collision:
-			print("Re-enabling collision for:", platform.name)
 			collision.set_deferred("disabled", false)

@@ -1,6 +1,7 @@
 extends Control
 
 @onready var options_tab_menu = $options_tab
+@onready var pause_menu = $PanelContainer
 
 func _ready():
 	self.visible = false
@@ -29,9 +30,11 @@ func _on_continue_button_pressed() -> void:
 
 func _on_options_button_pressed() -> void:
 	options_tab_menu.visible = true
+	pause_menu.visible = false
 	
 func _on_back_pressed() -> void:
 	options_tab_menu.visible = false
+	pause_menu.visible = true
 	
 func _on_return_button_pressed() -> void:
 	resume()
