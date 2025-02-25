@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://t4g6x8cp4c22"
+path="res://.godot/imported/HeatleyBros - HeatleyBros VI - Simple Fun.mp3-b2a6062bde055d01060211d3c83e9593.mp3str"
+
+[deps]
+
+source_file="res://Assets/BGMs/HeatleyBros - HeatleyBros VI - Simple Fun.mp3"
+dest_files=["res://.godot/imported/HeatleyBros - HeatleyBros VI - Simple Fun.mp3-b2a6062bde055d01060211d3c83e9593.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

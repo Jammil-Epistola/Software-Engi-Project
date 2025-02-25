@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=3 uid="uid://3q6ojrfsoax7"]
+
+[ext_resource type="Texture2D" uid="uid://vj31c12h5qk" path="res://Assets/Background/crystal_cave_bg.jpg" id="1_poaxw"]
+[ext_resource type="PackedScene" uid="uid://b7epu6wqif7en" path="res://Scenes/Objects/instruction_panel.tscn" id="2_1vl5h"]
+[ext_resource type="FontFile" uid="uid://dh1or6jgu5dia" path="res://Assets/Text Fonts/Gameplay.ttf" id="2_spubo"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dseqo"]
+texture = ExtResource("1_poaxw")
+
+[node name="Instruction Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_dseqo")
+
+[node name="Panel" type="Panel" parent="Background"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="InsructionLbl" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -384.0
+offset_top = 13.0
+offset_right = 391.0
+offset_bottom = 89.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_spubo")
+theme_override_font_sizes/font_size = 50
+text = "- How to play -"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="InstructionPanel" parent="." instance=ExtResource("2_1vl5h")]

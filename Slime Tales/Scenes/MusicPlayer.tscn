@@ -1,7 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://qgeger15n370"]
-
-[ext_resource type="Script" path="res://Scripts/music_player.gd" id="1_d3pof"]
-
-[node name="MusicPlayer" type="AudioStreamPlayer"]
-bus = &"Music"
-script = ExtResource("1_d3pof")

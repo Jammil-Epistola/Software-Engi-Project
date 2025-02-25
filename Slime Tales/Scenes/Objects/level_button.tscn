@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=3 uid="uid://cq0suqbfr04b0"]
+
+[ext_resource type="Script" path="res://Scripts/Objects/level_button.gd" id="1_2y51x"]
+[ext_resource type="FontFile" uid="uid://dh1or6jgu5dia" path="res://Assets/Text Fonts/Gameplay.ttf" id="1_8kaqr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iat4x"]
+bg_color = Color(0.493545, 0.493546, 0.493545, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wx8pa"]
+bg_color = Color(0.122252, 0.122252, 0.122252, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j8e2u"]
+bg_color = Color(0.2484, 0.2484, 0.2484, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="Level Button" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2y51x")
+
+[node name="LevelBtn" type="Button" parent="."]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -50.0
+offset_right = 50.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_8kaqr")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/hover = SubResource("StyleBoxFlat_iat4x")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wx8pa")
+theme_override_styles/normal = SubResource("StyleBoxFlat_j8e2u")
+
+[connection signal="pressed" from="LevelBtn" to="." method="_on_level_btn_pressed"]

@@ -1,0 +1,220 @@
+[gd_scene load_steps=18 format=3 uid="uid://b1v53s7w3xcwr"]
+
+[ext_resource type="Texture2D" uid="uid://crrlrsdp2cbu5" path="res://Assets/Images/SE-MenuBg.png" id="1_ddw2w"]
+[ext_resource type="Script" path="res://Scripts/Menus/choose_controller.gd" id="1_vhr6a"]
+[ext_resource type="Texture2D" uid="uid://dudr86lsl8e54" path="res://Assets/Images/Keyboard.png" id="2_sb8ls"]
+[ext_resource type="FontFile" uid="uid://dh1or6jgu5dia" path="res://Assets/Text Fonts/Gameplay.ttf" id="3_myuu0"]
+[ext_resource type="Texture2D" uid="uid://dilb430wbusj5" path="res://Assets/Images/Controller.png" id="4_de2fb"]
+[ext_resource type="FontFile" uid="uid://dyd80n3v81nhl" path="res://Assets/Text Fonts/AldotheApache.ttf" id="5_qj5ya"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fam2w"]
+texture = ExtResource("1_ddw2w")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xdmt0"]
+bg_color = Color(0, 0, 0, 0.788235)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a66p1"]
+texture = ExtResource("2_sb8ls")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_emkm4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b10b2"]
+bg_color = Color(0.976471, 0.878431, 0.866667, 0.4)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1viel"]
+bg_color = Color(0.996078, 0.972549, 0.968627, 0.584314)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g4cvf"]
+bg_color = Color(0.670588, 0.290196, 0.278431, 0)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1jj1l"]
+texture = ExtResource("4_de2fb")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qx26f"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yms2a"]
+bg_color = Color(0.980392, 0.901961, 0.894118, 0.368627)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7w1qx"]
+bg_color = Color(1, 1, 1, 0.682353)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="ChooseController" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vhr6a")
+
+[node name="AboutBg" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_fam2w")
+
+[node name="KeyBPanel" type="Panel" parent="AboutBg"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.077
+anchor_top = 0.145
+anchor_right = 0.077
+anchor_bottom = 0.145
+offset_left = 0.29599
+offset_top = 55.04
+offset_right = 453.296
+offset_bottom = 511.04
+theme_override_styles/panel = SubResource("StyleBoxFlat_xdmt0")
+
+[node name="KeyBoard" type="Panel" parent="AboutBg/KeyBPanel"]
+custom_minimum_size = Vector2(500, 300)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -250.0
+offset_right = 250.0
+offset_bottom = 300.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_a66p1")
+
+[node name="KeyboardBtn" type="Button" parent="AboutBg/KeyBPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.51
+anchor_top = 0.718
+anchor_right = 0.51
+anchor_bottom = 0.718
+offset_left = -230.03
+offset_top = -326.408
+offset_right = 220.97
+offset_bottom = 130.592
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_myuu0")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxEmpty_emkm4")
+theme_override_styles/hover = SubResource("StyleBoxFlat_b10b2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_1viel")
+theme_override_styles/normal = SubResource("StyleBoxFlat_g4cvf")
+
+[node name="KeyboardLbl" type="Label" parent="AboutBg/KeyBPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.734
+anchor_right = 0.5
+anchor_bottom = 0.734
+offset_left = -155.5
+offset_top = -35.704
+offset_right = 174.5
+offset_bottom = 30.296
+theme_override_fonts/font = ExtResource("5_qj5ya")
+theme_override_font_sizes/font_size = 84
+text = "KEYBOARD"
+
+[node name="ControllerPanel" type="Panel" parent="AboutBg"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.542
+anchor_top = 0.145
+anchor_right = 0.542
+anchor_bottom = 0.145
+offset_left = -0.384033
+offset_top = 54.04
+offset_right = 464.616
+offset_bottom = 511.04
+theme_override_styles/panel = SubResource("StyleBoxFlat_xdmt0")
+
+[node name="Controller" type="Panel" parent="AboutBg/ControllerPanel"]
+custom_minimum_size = Vector2(500, 300)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 40.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_1jj1l")
+
+[node name="ControllerBtn" type="Button" parent="AboutBg/ControllerPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.725
+anchor_right = 0.5
+anchor_bottom = 0.725
+offset_left = -231.5
+offset_top = -330.325
+offset_right = 233.5
+offset_bottom = 125.675
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_myuu0")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/focus = SubResource("StyleBoxEmpty_qx26f")
+theme_override_styles/hover = SubResource("StyleBoxFlat_yms2a")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7w1qx")
+theme_override_styles/normal = SubResource("StyleBoxFlat_g4cvf")
+
+[node name="KeyboardLbl" type="Label" parent="AboutBg/ControllerPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.739
+anchor_right = 0.5
+anchor_bottom = 0.739
+offset_left = -192.5
+offset_top = -35.723
+offset_right = 196.5
+offset_bottom = 35.277
+theme_override_fonts/font = ExtResource("5_qj5ya")
+theme_override_font_sizes/font_size = 84
+text = "CONTROLLER"
+
+[node name="ChooseAController" type="Label" parent="AboutBg"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.513
+anchor_right = 0.513
+offset_left = -387.976
+offset_top = 23.0
+offset_right = 387.024
+offset_bottom = 99.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_myuu0")
+theme_override_font_sizes/font_size = 50
+text = "- Choose a Controller -"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="AboutBg/KeyBPanel/KeyboardBtn" to="." method="_on_keyboard_btn_pressed"]
+[connection signal="pressed" from="AboutBg/ControllerPanel/ControllerBtn" to="." method="_on_controller_btn_pressed"]

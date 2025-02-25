@@ -1,0 +1,85 @@
+[gd_scene load_steps=9 format=3 uid="uid://cqbmkxkjwkxqf"]
+
+[ext_resource type="Script" path="res://Scripts/Menus/level_select.gd" id="1_d5xx4"]
+[ext_resource type="Texture2D" uid="uid://vj31c12h5qk" path="res://Assets/Background/crystal_cave_bg.jpg" id="1_iv0u0"]
+[ext_resource type="FontFile" uid="uid://dh1or6jgu5dia" path="res://Assets/Text Fonts/Gameplay.ttf" id="2_sre4b"]
+[ext_resource type="FontFile" uid="uid://dyd80n3v81nhl" path="res://Assets/Text Fonts/AldotheApache.ttf" id="4_ppduc"]
+[ext_resource type="StyleBox" uid="uid://cq7n5xmwaqnqx" path="res://Styles/ButtonHover.tres" id="5_rjskp"]
+[ext_resource type="StyleBox" uid="uid://cnhmoydrn3voe" path="res://Styles/ButtonPressed.tres" id="6_kl0ue"]
+[ext_resource type="StyleBox" uid="uid://cwtsu02gqa0h1" path="res://Styles/ButtonNormal.tres" id="7_yf17a"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qynmn"]
+texture = ExtResource("1_iv0u0")
+
+[node name="LevelSelect" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_d5xx4")
+
+[node name="Bg" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_qynmn")
+
+[node name="Panel" type="Panel" parent="Bg"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LevelSelectLbl" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -384.0
+offset_top = 13.0
+offset_right = 391.0
+offset_bottom = 89.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_sre4b")
+theme_override_font_sizes/font_size = 50
+text = "- Level Select -"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LevelGrid" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 150
+columns = 3
+
+[node name="ReturnBtn" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 40.0
+offset_top = -100.0
+offset_right = 240.0
+offset_bottom = -25.0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("4_ppduc")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/hover = ExtResource("5_rjskp")
+theme_override_styles/pressed = ExtResource("6_kl0ue")
+theme_override_styles/normal = ExtResource("7_yf17a")
+text = "Back"
+
+[connection signal="pressed" from="ReturnBtn" to="." method="_on_return_btn_pressed"]

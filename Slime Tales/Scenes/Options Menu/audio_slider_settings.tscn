@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://0f7okaw2w8ju"]
 
-[ext_resource type="Script" path="res://Scripts/audio_slider_settings.gd" id="1_xsloh"]
+[ext_resource type="Script" path="res://Scripts/Options/audio_slider_settings.gd" id="1_xsloh"]
 
 [node name="Audio_Slider_Settings" type="Control"]
 layout_mode = 3
